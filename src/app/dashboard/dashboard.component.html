@@ -1,0 +1,63 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">Datos</h1>
+  <!--<div class="btn-toolbar mb-2 mb-md-0">
+      <div class="btn-group me-2">
+        <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+      </div>
+      <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+        <span data-feather="calendar" class="align-text-bottom"></span>
+        This week
+      </button>
+    </div>-->
+  <form action="">
+    <div class="form-row d-flex justify-content-between">
+      <!--fecha desde-->
+      <div class="col-xs-6 col-md-4">
+        <div class="input-group">
+          <div class="input-group-prepend input-group-lg">
+            <div class="input-group-text">
+              <i class="fa-solid fa-calendar-days"></i>
+            </div>
+          </div>
+          <input type="text" placeholder="fecha q sale el barco" class="form-control" bsDatepicker [bsConfig]="{isAnimated:true}">
+        </div>
+      </div>
+      <!--fecha hasta-->
+
+      <div class="col-md-4">
+        <div class="input-group">
+          <div class="input-group-prepend input-group-lg">
+            <div class="input-group-text">
+              <i class="fa-solid fa-calendar-days"></i>
+            </div>
+          </div>
+          <input type="text" placeholder="fecha que regresa el barco" class="form-control" bsDatepicker [bsConfig]="{isAnimated:true}">
+        </div>
+      </div>
+      <!--barco-->
+      <div class="col-md-4">
+        <div class="input-group">
+          <div class="input-group-prepend input-group-lg">
+            <div class="input-group-text">
+              <i class="fa-solid fa-ship"></i>
+            </div>
+          </div>
+          <select class="form-control" id="">
+            <option value="">casitas</option>
+            <option value="">z7</option>
+            <option value="">z3</option>
+            <option value="">z1</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<canvas baseChart width="400" height="400"
+[type]="'line'"
+[data]="lineChartData"
+[options]="lineChartOptions"
+[legend]="lineChartLegend">
+</canvas>
